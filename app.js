@@ -6,7 +6,7 @@ const cookieParser = require("cookie-parser")
 // ROUTERLAR     
 const indexRouter = require("./routes/index")
  // MİDDLEWARE
-
+const send_contact_mail = require('./middleware/nodemailler')
 // MONGOOSE 
  const connect_data_base = require("./server")
 
@@ -25,7 +25,6 @@ app.use(cookieParser());
 
 
 app.use("/",indexRouter)
-
 app.use((req, res, next) => {
     res.status(404).render('404');
 });

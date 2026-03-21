@@ -1,29 +1,49 @@
-  <section id="hero-area" class="header-area header-eight">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 col-md-12 col-12">
-          <div class="header-content">
-            <h1 style="font-family: cursive;">Bir cismi hayal etmek, onu üretmenin yarısıdır.</h1>
-            <p>
-              Web Site (backend-frontend), Tarama, Çizim/Modelleme hizmetini vermekteyiz.
-            </p>
-            <div class="button">
-              <a href="javascript:void(0)" class="btn primary-btn">Başlayalım</a>
-              <a href="https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM"
-                class="glightbox video-button">
-                <span class="btn icon-btn rounded-full">
-                  <i class="lni lni-play"></i>
-                </span>
-                <span class="text">İzle</span>
-              </a>
-            </div>
-          </div>
+<section id="hero-area" class="header-area header-eight">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-12 col-12">
+        <div class="header-content">
+          <h1 style="font-family: cursive;">Bir cismi hayal etmek, onu üretmenin yarısıdır.</h1>
+          <p>
+            Web Site (backend-frontend), Tarama, Çizim/Modelleme hizmetini vermekteyiz.
+          </p>
+          <% if(page==='blog-single' ){ %>
+            <nav style="margin-top: 30px;" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Ana Sayfa</a></li>
+                <li class="breadcrumb-item"><a href="/blog">Blog</a></li>
+                <li class="breadcrumb-item active" aria-current="page">blog adı buraya</li>
+              </ol>
+            </nav>
+            <% } %>
+              <% if(page==='blog' ){ %>
+                <nav style="margin-top: 30px;" aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                  </ol>
+                </nav>
+                <% } %>
+
+                  <% if(page !=='blog' ){ %>
+                    <div class="button">
+                      <a href="#contact" class="btn primary-btn">Başlayalım</a>
+                      <a href="https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM"
+                        class="glightbox video-button">
+                        <span class="btn icon-btn rounded-full">
+                          <i class="lni lni-play"></i>
+                        </span>
+                        <span class="text">İzle</span>
+                      </a>
+                    </div>
+                    <% } %>
         </div>
-        <div class="col-lg-6 col-md-12 col-12">
-          <div class="header-image">
-            <img src="images/header/hero-image.png" alt="resim" />
-          </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-12">
+        <div class="header-image">
+          <img src="images/header/hero-image.png" alt="resim" />
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>

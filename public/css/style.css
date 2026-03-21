@@ -1459,7 +1459,7 @@ p {
   top: 0;
   height: 100%;
   width: 100%;
-  background-image: url("assets/images/call-action/overlay.png");
+  /* background-image: url("assets/images/call-action/overlay.png"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -1633,6 +1633,7 @@ p {
   position: relative;
   z-index: 3;
   padding-top: 100px;
+  margin-bottom: 13rem;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .contact-section {
@@ -1914,3 +1915,25 @@ p {
   color: var(--white);
   background-color: var(--primary-dark);
 }
+/* SWİPER css */
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* SWİPER css */
