@@ -51,6 +51,7 @@
     pageLink.forEach(elem => {
         elem.addEventListener('click', e => {
             e.preventDefault();
+            if(elem.getAttribute('href') === '/'){window.location.href = window.location.origin}
             document.querySelector(elem.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth',
                 offsetTop: 1 - 60,

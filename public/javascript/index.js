@@ -81,8 +81,8 @@ $(() => {
         const yuklu_div = data_blog_length - div_d_none_sayisi
         for (let index = 0; index < yuklu_div; index++) {
             const data_img = $(data_blog[index]).children().children('a').children('img')
-            const data_src= $(data_img).attr('data-src')
-            $(data_img).attr('src', data_src) 
+            const data_src = $(data_img).attr('data-src')
+            $(data_img).attr('src', data_src)
         }
     }
 
@@ -99,5 +99,21 @@ $(() => {
         }
         data_src()
     });
-    
-})
+
+})// YÜKLE BUTONU
+
+
+
+
+
+
+
+$(async () => {
+    const url = 'blog/create'
+    const data = {
+        image: '1',
+        title: 'lorem ipsum',
+        body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Quas expedita est sit voluptates necessitatibus molestiasveritatis? Fugit quasi tempore exercitationem, consectetur ullam id.Nemo, sit expedita facere explicabo sapientedolore?'
+    }
+    //   await axios_data(url, data)
+}) // blog yükle

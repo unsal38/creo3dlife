@@ -1,0 +1,40 @@
+          <div id="blog" class="latest-news-area section">
+            <div class="container">
+              <div class="row">
+
+
+                <% blog_data.forEach(v_blog => {%>
+                  
+                
+                
+                <div class="col-lg-4 col-md-6 col-12">
+                  <div class="single-news">
+                    <div class="image">
+                      <a href="/blog/blog-single/<%= v_blog._id _%>"><img class="thumb" data-src="assets/images/blog/<%= v_blog.image _%>.jpg"
+                          alt="Blog" /></a>
+
+                    </div>
+                    <div class="content-body">
+                      <h4 class="title">
+                        <a href="/blog/blog-single/<%= v_blog._id _%>"> <%= v_blog.title _%></a>
+                      </h4>
+                      <p class="uc_nokta">
+                        <%= v_blog.body _%>
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <%  }); %>
+
+                </div>
+                <div style="display: flex; flex-direction: column; margin-top: 10px; ">
+                  <hr style="position: relative;">
+                  <button style=" position: absolute; left: 50%; transform: translate(-50%); background-color: #e8762c;"
+                    type="button" name="yukle" class="col-4 btn">Daha Fazla Yükle</button>
+                </div>
+
+              </div>
+            </div>
+          </div>

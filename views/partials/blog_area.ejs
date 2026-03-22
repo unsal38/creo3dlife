@@ -5,11 +5,10 @@
                     <div class="row">
                       <div class="col-12">
                         <div class="content">
-                          <h6>latest news</h6>
-                          <h2 class="fw-bold">Latest News & Blog</h2>
+                          <h6><a href="/blog">Blog Sayfası</a></h6>
+                          <h2 class="fw-bold text-capitalize">son haberler & Blog</h2>
                           <p>
-                            There are many variations of passages of Lorem Ipsum available,
-                            but the majority have suffered alteration in some form.
+                            Son gelişmeler ve haberler ile size en doğru bilgiyi vermek...
                           </p>
                         </div>
                       </div>
@@ -27,75 +26,32 @@
                     <!-- Swiper SLİDE BLOG -->
                     <div class="swiper mySwiper">
                       <div class="swiper-wrapper">
-
+                        <% blog_data.forEach(v_blog => {%>
+                          
+                        
                         <div class="swiper-slide">
                           <div class="single-news">
                             <div class="image">
-                              <a href="/blog"><img class="thumb" src="assets/images/blog/1.jpg"
+                              <a href="/blog/blog-single/<%= v_blog._id _%>"><img class="thumb" src="assets/images/blog/<%= v_blog.image _%>.jpg"
                                   alt="Blog" /></a>
-                              <div class="meta-details">
+                              <!-- <div class="meta-details">
                                 <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
                                 <span>BY TIM NORTON</span>
-                              </div>
+                              </div> -->
                             </div>
                             <div class="content-body">
                               <h4 class="title">
-                                <a href="javascript:void(0)"> Make your team a Design driven company </a>
+                                <a href="/blog/blog-single/<%= v_blog._id _%>"> <%= v_blog.title _%> </a>
                               </h4>
-                              <p>
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry. Lorem Ipsum has been the industry's
-                                standard.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="single-news">
-                            <div class="image">
-                              <a href="/blog"><img class="thumb" src="assets/images/blog/1.jpg"
-                                  alt="Blog" /></a>
-                              <div class="meta-details">
-                                <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
-                                <span>BY TIM NORTON</span>
-                              </div>
-                            </div>
-                            <div class="content-body">
-                              <h4 class="title">
-                                <a href="javascript:void(0)"> Make your team a Design driven company </a>
-                              </h4>
-                              <p>
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry. Lorem Ipsum has been the industry's
-                                standard.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="single-news">
-                            <div class="image">
-                              <a href="/blog"><img class="thumb" src="assets/images/blog/1.jpg"
-                                  alt="Blog" /></a>
-                              <div class="meta-details">
-                                <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
-                                <span>BY TIM NORTON</span>
-                              </div>
-                            </div>
-                            <div class="content-body">
-                              <h4 class="title">
-                                <a href="javascript:void(0)"> Make your team a Design driven company </a>
-                              </h4>
-                              <p>
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry. Lorem Ipsum has been the industry's
-                                standard.
+                              <p class="uc_nokta">
+                                <%= v_blog.body _%>
                               </p>
                             </div>
                           </div>
                         </div>
 
 
+                        <% }); %> 
 
                       </div>
                       <div class="swiper-pagination"></div>
